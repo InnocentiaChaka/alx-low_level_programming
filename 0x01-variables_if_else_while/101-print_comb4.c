@@ -6,20 +6,20 @@
  */
 int main(void)
 {
-	int m, i, j;
+	int n, m, l;
 
-	for (i = '0'; i <= '9'; i++)
+	for (n = 48; n < 58; n++)
 	{
-		for (j = '0'; j <= '9'; j++)
+		for (m = 49; m < 58; m++)
 		{
-			for (m = '0'; m < '9'; m++)
+			for (l = 50; l < 58; l++)
 			{
-				if (i < j && j < m)
+				if (l > m && m > n)
 				{
-					putchar(i);
-					putchar(j);
+					putchar(n);
 					putchar(m);
-					if (i == '7' && m == '9')
+					putchar(l);
+					if (n != 55 || m != 56)
 					{
 						putchar(',');
 						putchar(' ');
@@ -31,4 +31,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
